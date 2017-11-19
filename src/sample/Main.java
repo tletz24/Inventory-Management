@@ -8,8 +8,6 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    public static Scene mainLoginScene;
-
     @Override
     public void start(Stage loginWindow) throws Exception{
 
