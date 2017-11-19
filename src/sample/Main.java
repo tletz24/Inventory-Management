@@ -23,7 +23,7 @@ public class Main extends Application {
 
         FXMLLoader secondPageLoader = new FXMLLoader(getClass().getResource("FileSelectorWindow.fxml"));
         Parent secondPane = secondPageLoader.load();
-        Scene secondScene = new Scene(secondPane, 300, 275);
+        Scene secondScene = new Scene(secondPane, 600, 322);
 
         FileSelectorWindowController secondPaneController = (FileSelectorWindowController) secondPageLoader.getController();
         secondPaneController.setFirstScene(firstScene);

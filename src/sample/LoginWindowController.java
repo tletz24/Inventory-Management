@@ -50,8 +50,6 @@ public class LoginWindowController {
         }
     }
 
-
-
     //Here we handle when the uer selects the QUIT button.
     public void handleLogInQuit() {
         System.out.println("Exiting the program");
