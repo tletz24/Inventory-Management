@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="center" hgap="10" stylesheets="@Stylish.css" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<GridPane alignment="center" hgap="10" stylesheets="@Stylish.css" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LoginWindowController">
    <children>
       <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="400.0" spacing="5.0">
          <children>
@@ -27,7 +27,8 @@
             <Label text="Username" />
             <TextField fx:id="userName" />
             <Label text="Password" />
-            <PasswordField fx:id="password" />
+            <PasswordField fx:id="password" onAction="#onEnter"/>
+            <Label fx:id="errorLine" textFill="RED" />
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                <children>
                   <Button fx:id="logInQuit" mnemonicParsing="false" onAction="#handleLogInQuit" prefWidth="75.0" text="Quit" />
