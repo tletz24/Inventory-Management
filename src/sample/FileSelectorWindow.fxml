@@ -18,14 +18,14 @@
          </font>
       </Label>
       <Separator prefWidth="200.0" />
-      <ListView prefHeight="200.0" prefWidth="200.0" />
+      <ListView fx:id="fileViewFXML" prefHeight="200.0" prefWidth="200.0" />
       <Separator prefWidth="200.0" />
       <HBox alignment="CENTER" prefHeight="39.0" prefWidth="520.0" spacing="10.0">
          <children>
-            <Button mnemonicParsing="false" text="Select File" />
+            <Button mnemonicParsing="false" onAction="#selectFile" text="Select File" />
             <Separator orientation="VERTICAL" prefHeight="200.0" />
-            <TextField prefHeight="25.0" prefWidth="225.0" promptText="Enter File Name Here" />
-            <Button mnemonicParsing="false" text="Create New File" />
+            <TextField fx:id="fileTextField" prefHeight="25.0" prefWidth="225.0" promptText="Enter File Name Here" />
+            <Button mnemonicParsing="false" onAction="#createFile" text="Create New File" />
             <Separator orientation="VERTICAL" prefHeight="200.0" />
             <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="61.0" text="Exit" />
          </children>
