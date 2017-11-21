@@ -30,7 +30,6 @@ public class LoginWindowController {
         String tempPassword = password.getText();
         if (tempUserName.toLowerCase().equals("admin")) {
             if (tempPassword.equals("password123")) {
-                //TODO grant access to the user
                 System.out.println("The user has successfully logged in");
                 System.out.println("Username: " + tempUserName);
                 System.out.println("Password: " + tempPassword);

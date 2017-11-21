@@ -1,17 +1,14 @@
 package sample;
 
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
-import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import java.io.File;
-
-import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -28,8 +25,20 @@ public class FileSelectorWindowController implements Initializable {
     }
 
     public void createFile(ActionEvent event) {
-        String newFile = fileTextField.getText();
-        fileViewFXML.getItems().addAll(newFile);
+        String newFileName = fileTextField.getText();
+
+        try {
+            File file = new File("inventoryFiles/" + newFileName);
+            if (file.createNewFile()) {
+                System.out.println("File: " + newFileName + " was created!");
+            } else {
+                System.out.println("File already exists.");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        fileViewFXML.getItems().addAll(newFileName);
         fileTextField.setText("");
     }
 
